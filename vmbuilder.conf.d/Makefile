@@ -15,4 +15,7 @@ run.sh:
 	../../vendor/vmbuilder/kvm/rhel/6/misc/kvm-ctl.sh render-runscript --config-path ./vmbuilder.conf > $@
 	chmod +x run.sh
 
+run:
+	sudo ../../vendor/vmbuilder/kvm/rhel/6/misc/kvm-ctl.sh start --image-path=./box-disk1.raw --brname=vboxbr0
+
 .PHONY: run.sh
